@@ -1,8 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3we-vx-hPO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Dog View Controller-->
+        <scene sceneID="oJg-kq-2Ex">
+            <objects>
+                <viewController id="3we-vx-hPO" customClass="IRBDogViewController" customModule="Dog_C" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="75X-9d-dQ0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Enter dog breed here..." translatesAutoresizingMaskIntoConstraints="NO" id="GVd-0t-ouy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="82"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLW-p6-ulm">
+                                <rect key="frame" x="20" y="602" width="374" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vMr-c7-YZw">
+                                <rect key="frame" x="20" y="154" width="374" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="XfK-av-uau"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GVd-0t-ouy" firstAttribute="leading" secondItem="acS-0A-3SF" secondAttribute="leading" id="2s6-9z-OGV"/>
+                            <constraint firstItem="cLW-p6-ulm" firstAttribute="top" secondItem="vMr-c7-YZw" secondAttribute="bottom" constant="98" id="41x-Do-sc4"/>
+                            <constraint firstItem="cLW-p6-ulm" firstAttribute="leading" secondItem="acS-0A-3SF" secondAttribute="leading" constant="20" id="7OJ-UJ-XVJ"/>
+                            <constraint firstItem="GVd-0t-ouy" firstAttribute="trailing" secondItem="acS-0A-3SF" secondAttribute="trailing" id="FIi-54-L1L"/>
+                            <constraint firstItem="acS-0A-3SF" firstAttribute="trailing" secondItem="cLW-p6-ulm" secondAttribute="trailing" constant="20" id="Hoa-6Y-GgR"/>
+                            <constraint firstItem="cLW-p6-ulm" firstAttribute="top" secondItem="vMr-c7-YZw" secondAttribute="bottom" constant="98" id="cYK-qu-7J2"/>
+                            <constraint firstItem="vMr-c7-YZw" firstAttribute="top" secondItem="GVd-0t-ouy" secondAttribute="bottom" constant="28" id="chF-eu-SPI"/>
+                            <constraint firstItem="acS-0A-3SF" firstAttribute="bottom" secondItem="cLW-p6-ulm" secondAttribute="bottom" constant="219" id="fUk-d9-HJd"/>
+                            <constraint firstItem="vMr-c7-YZw" firstAttribute="leading" secondItem="acS-0A-3SF" secondAttribute="leading" constant="20" id="ily-JA-jQn"/>
+                            <constraint firstItem="acS-0A-3SF" firstAttribute="trailing" secondItem="vMr-c7-YZw" secondAttribute="trailing" constant="20" id="wzw-qy-vgv"/>
+                            <constraint firstItem="GVd-0t-ouy" firstAttribute="top" secondItem="acS-0A-3SF" secondAttribute="top" id="xaV-4a-kiS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="acS-0A-3SF"/>
+                    </view>
+                    <connections>
+                        <outlet property="dogBreedLabel" destination="cLW-p6-ulm" id="nLD-Ww-irG"/>
+                        <outlet property="dogImageView" destination="vMr-c7-YZw" id="tTP-pb-dbs"/>
+                        <outlet property="dogSearchBar" destination="GVd-0t-ouy" id="TRT-xn-XkM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0yA-cX-NkY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.739130434782609" y="28.794642857142854"/>
+        </scene>
+    </scenes>
 </document>

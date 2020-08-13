@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface IRBDogController : NSObject
 
++ (instancetype)sharedInstance;
+
 - (void)fetchDogForSearchTerm:(NSString *)searchTerm
                    completion:(void(^)(IRBDog *))completion;
 

@@ -15,6 +15,7 @@
 		4B8511E824E591D4007892DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8511E724E591D4007892DE /* main.m */; };
 		4B8511F724E59297007892DE /* IRBDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8511F624E59297007892DE /* IRBDog.m */; };
 		4B8511FA24E59492007892DE /* IRBDogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8511F924E59492007892DE /* IRBDogController.m */; };
+		4B8511FD24E5A023007892DE /* IRBDogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8511FC24E5A023007892DE /* IRBDogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		4B8511F624E59297007892DE /* IRBDog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRBDog.m; sourceTree = "<group>"; };
 		4B8511F824E59492007892DE /* IRBDogController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRBDogController.h; sourceTree = "<group>"; };
 		4B8511F924E59492007892DE /* IRBDogController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRBDogController.m; sourceTree = "<group>"; };
+		4B8511FB24E5A023007892DE /* Dog-C-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dog-C-Bridging-Header.h"; sourceTree = "<group>"; };
+		4B8511FC24E5A023007892DE /* IRBDogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRBDogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 		4B8511F124E59222007892DE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4B8511FC24E5A023007892DE /* IRBDogViewController.swift */,
+				4B8511FB24E5A023007892DE /* Dog-C-Bridging-Header.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 				TargetAttributes = {
 					4B8511D124E591D3007892DE = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
@@ -203,6 +209,7 @@
 				4B8511D724E591D3007892DE /* AppDelegate.m in Sources */,
 				4B8511FA24E59492007892DE /* IRBDogController.m in Sources */,
 				4B8511E824E591D4007892DE /* main.m in Sources */,
+				4B8511FD24E5A023007892DE /* IRBDogViewController.swift in Sources */,
 				4B8511F724E59297007892DE /* IRBDog.m in Sources */,
 				4B8511DA24E591D3007892DE /* SceneDelegate.m in Sources */,
 			);
@@ -344,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4R3M5PR4UZ;
 				INFOPLIST_FILE = "Dog-C/Resources/Info.plist";
@@ -353,6 +361,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ianbecker.Dog-C";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dog-C/Controllers/ViewController/Dog-C-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -361,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4R3M5PR4UZ;
 				INFOPLIST_FILE = "Dog-C/Resources/Info.plist";
@@ -370,6 +382,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ianbecker.Dog-C";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dog-C/Controllers/ViewController/Dog-C-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -15,6 +15,17 @@ static NSString * const randomComponent = @"random";
 
 @implementation IRBDogController
 
++ (instancetype)sharedInstance
+{
+    static IRBDogController * sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^ {
+        sharedInstance = [IRBDogController new];
+    });
+    
+    return sharedInstance;
+}
+
 - (void)fetchDogForSearchTerm:(NSString *)searchTerm completion:(void (^)(IRBDog * _Nullable))completion
 {
     NSURL * baseURL = [NSURL URLWithString:baseURLString];
