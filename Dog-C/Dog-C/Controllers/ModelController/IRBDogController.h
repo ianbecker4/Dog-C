@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IRBDog.h"
+#import "UIKit/UIKit.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)fetchDogForSearchTerm:(NSString *)searchTerm
                    completion:(void(^)(IRBDog *))completion;
+
+- (void)fetchDogImage:(IRBDog *)dog completion:(void(^) (UIImage * _Nullable))completion;
 
 @end
 
