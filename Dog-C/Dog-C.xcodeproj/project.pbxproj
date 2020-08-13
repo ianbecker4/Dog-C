@@ -13,6 +13,8 @@
 		4B8511E224E591D4007892DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B8511E124E591D4007892DE /* Assets.xcassets */; };
 		4B8511E524E591D4007892DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B8511E324E591D4007892DE /* LaunchScreen.storyboard */; };
 		4B8511E824E591D4007892DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8511E724E591D4007892DE /* main.m */; };
+		4B8511F724E59297007892DE /* IRBDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8511F624E59297007892DE /* IRBDog.m */; };
+		4B8511FA24E59492007892DE /* IRBDogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8511F924E59492007892DE /* IRBDogController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		4B8511E424E591D4007892DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B8511E624E591D4007892DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B8511E724E591D4007892DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4B8511F524E59297007892DE /* IRBDog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRBDog.h; sourceTree = "<group>"; };
+		4B8511F624E59297007892DE /* IRBDog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRBDog.m; sourceTree = "<group>"; };
+		4B8511F824E59492007892DE /* IRBDogController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRBDogController.h; sourceTree = "<group>"; };
+		4B8511F924E59492007892DE /* IRBDogController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRBDogController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,8 @@
 		4B8511F324E59236007892DE /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
+				4B8511F824E59492007892DE /* IRBDogController.h */,
+				4B8511F924E59492007892DE /* IRBDogController.m */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -115,6 +123,8 @@
 		4B8511F424E5923F007892DE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4B8511F524E59297007892DE /* IRBDog.h */,
+				4B8511F624E59297007892DE /* IRBDog.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -145,6 +155,7 @@
 		4B8511CA24E591D3007892DE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = IRB;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Ian Becker";
 				TargetAttributes = {
@@ -190,7 +201,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B8511D724E591D3007892DE /* AppDelegate.m in Sources */,
+				4B8511FA24E59492007892DE /* IRBDogController.m in Sources */,
 				4B8511E824E591D4007892DE /* main.m in Sources */,
+				4B8511F724E59297007892DE /* IRBDog.m in Sources */,
 				4B8511DA24E591D3007892DE /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
